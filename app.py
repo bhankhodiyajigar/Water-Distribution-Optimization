@@ -59,7 +59,7 @@ st.subheader("Predicted Water Demand")
 
 st.dataframe(
     demand_data,
-    use_container_width=True
+    width="stretch"
 )
 
 total_demand = demand_data["predicted_demand"].sum()
@@ -246,14 +246,14 @@ if status == "Optimal":
 
     st.dataframe(
         optimized_flow_df,
-        use_container_width=True
+        width="stretch"
     )
 
     st.subheader("Node-wise Water Supply")
 
     st.dataframe(
         node_result_df,
-        use_container_width=True
+        width="stretch"
     )
 
     st.subheader("Optimized Flow by Link")
@@ -292,5 +292,5 @@ scenario_summary = pd.DataFrame({
 
 st.dataframe(
     scenario_summary,
-    use_container_width=True
+    width="stretch"
 )
